@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedido de casamento</title>
+
+     <style>
+
+        body{
+            background-color: black;
+            padding: 190px;
+
+
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            justify-content: center;
+        }
+
+        #sim{
+            padding-right: 10px;
+            margin-right: -60px;
+            height: 40px;
+            width: 60px;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -120px;
+            
+
+
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: black;
+            border:2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+
+
+        }
+
+
+       
+
+
+
+
+
+
+     </style>
+
+
+
+</head>
+
+<body>
+    <div class="painel">
+
+        <h1>Eu te Amo</h1>
+        
+        <img src="WhatsApp Image 2023-11-23 at 19.21.16 (3).jpeg" alt="img">
+        
+        <h2>Aceitaria Casar Comigo?</h2>
+
+        <button id="sim" onclick="parabens()">Sim</button>
+        <button onmouseover="fuja()" id="nao">Não</button>
+
+    </div>
+    
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao");
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth; // offsetwidth pro botao nao passar da largura da tela
+            var maxY = alturaJanela - botaoNao.offsetHeight; // offsetheight pro botao nao passar da altura da tela
+
+            var aleatorioX = Math.floor(Math.random() * maxX); // math.random vai pegar uma posicao aleatoria do eixo X e vai "sortear" 
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        }
+
+        function parabens(){
+            alert("Parabens, Você fez a melhor escolha da vida :D")
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
